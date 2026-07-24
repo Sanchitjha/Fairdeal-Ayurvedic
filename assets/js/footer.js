@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <p class="text-sm leading-relaxed max-w-xs">Ayurvedic, Allopathic &amp; Generic wholesale distribution serving medical stores across Rampur, Uttar Pradesh.</p>
         <div class="flex gap-2.5 mt-5">
           <a href="https://wa.me/918603227530" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 hover:bg-saffron-500 hover:text-brand-900 transition flex items-center justify-center" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
-            <svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 20l1-5.3A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8.5 10.5c.4 2.5 2.3 4.4 4.8 4.8"/></svg>
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 20l1-5.3A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8.5 10.5c.4 2.5 2.3 4.4 4.8 4.8"/></svg>
           </a>
           <a href="tel:+918603227530" class="w-9 h-9 rounded-full bg-white/10 hover:bg-saffron-500 hover:text-brand-900 transition flex items-center justify-center" aria-label="Call the shop" title="Call the shop">
             <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15.5 17a13 13 0 0 1-8.5-8.5l2.4-1.6a1.4 1.4 0 0 0 .5-1.7L8.6 2.7A1.4 1.4 0 0 0 7 2 4.5 4.5 0 0 0 2.5 6.5C2.5 14.8 9.2 21.5 17.5 21.5A4.5 4.5 0 0 0 22 17a1.4 1.4 0 0 0-.7-1.6l-2.5-1.3a1.4 1.4 0 0 0-1.7.5Z"/></svg>
