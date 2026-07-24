@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fairdeal Trading Agency | Ayurvedic Wholesale & Distribution, Rampur</title>
+<meta name="description" content="Order Ayurvedic, Allopathic & Generic medicines wholesale online. Live PTR/MRP pricing, digital ledger, schemes and doorstep dispatch for retailers in Rampur, U.P.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><text y=%2220%22 font-size=%2220%22>🌿</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {50:'#f2f9f4',100:'#dcf1e3',500:'#249157',600:'#1c7a44',700:'#166139',800:'#0f3d2c',900:'#0c2f22'},
+          saffron: {400:'#f7b73a',500:'#ee9d0e',600:'#c97a00'},
+          cream: '#fbf7ee'
+        },
+        fontFamily: { display: ['Poppins','sans-serif'], sans: ['Inter','sans-serif'] }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-cream text-ink-900 antialiased">
+
+<!-- Promo ticker -->
+<div class="bg-saffron-500 text-[#3a2400] text-sm font-semibold overflow-hidden">
+  <div class="ticker-track py-2">
+    <div class="flex items-center gap-10 px-5">
+      <span>🌿 Flat 5% Extra on Himalaya products — Min Order ₹2000</span>
+      <span>🎁 Dabur Chyawanprash — Buy 10 Get 1 Free, valid till 31 Aug</span>
+      <span>🚚 Same-day dispatch on orders placed before 2 PM</span>
+      <span>💳 7-Day Trade Credit available for verified retailers</span>
+    </div>
+    <div class="flex items-center gap-10 px-5" aria-hidden="true">
+      <span>🌿 Flat 5% Extra on Himalaya products — Min Order ₹2000</span>
+      <span>🎁 Dabur Chyawanprash — Buy 10 Get 1 Free, valid till 31 Aug</span>
+      <span>🚚 Same-day dispatch on orders placed before 2 PM</span>
+      <span>💳 7-Day Trade Credit available for verified retailers</span>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="sticky top-0 z-50 mesh-hero leaf-pattern">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 shrink-0">
+        <span class="w-11 h-11 rounded-2xl bg-saffron-500 text-brand-900 flex items-center justify-center shadow-md">
+          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 21C7 20 4 16 4 11c0-5 3-8 8-8s8 3 8 8c0 5-3 9-8 10Z"/><path d="M8.5 13c1.5-3 3.5-5 7-6.5"/></svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-display font-bold text-white text-lg">Fairdeal Trading</span>
+          <span class="block text-[11px] text-white/60 tracking-wide">AYURVEDIC WHOLESALE · RAMPUR</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link text-sm">Home</a>
+        <a href="catalog.html" class="nav-link text-sm">Catalog</a>
+        <a href="dashboard.html" class="nav-link text-sm">Ledger &amp; Orders</a>
+        <a href="cart.html" class="nav-link text-sm">Cart</a>
+        <a href="contact.html" class="nav-link text-sm">Contact</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-3">
+        <a href="cart.html" class="relative w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition flex items-center justify-center text-white" aria-label="Cart">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 7H6"/></svg>
+          <span data-cart-badge class="absolute -top-1.5 -right-1.5 bg-saffron-500 text-[#3a2400] text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+        </a>
+        <a href="login.html" class="btn btn-saffron btn-sm">Retailer Login</a>
+      </div>
+
+      <button id="navToggle" class="md:hidden text-white p-2" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileNav" class="hidden md:hidden border-t border-white/10 bg-brand-900/98 px-4 pb-5 pt-2 space-y-1">
+    <a href="index.html" class="block nav-link py-2 active">Home</a>
+    <a href="catalog.html" class="block nav-link py-2">Catalog</a>
+    <a href="dashboard.html" class="block nav-link py-2">Ledger &amp; Orders</a>
+    <a href="cart.html" class="block nav-link py-2">Cart (<span data-cart-badge>0</span>)</a>
+    <a href="contact.html" class="block nav-link py-2">Contact</a>
+    <a href="login.html" class="btn btn-saffron btn-block mt-3">Retailer Login</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="mesh-hero leaf-pattern relative overflow-hidden">
+  <div class="blob w-96 h-96 bg-saffron-500 top-0 right-0"></div>
+  <div class="blob w-96 h-96 bg-brand-500 bottom-0 left-0"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative">
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+      <div>
+        <span class="badge badge-outline bg-white/10 !text-white border-white/25">🟢 8-Day Launch · Built for Rampur retailers</span>
+        <h1 class="font-display font-bold text-white text-4xl sm:text-5xl leading-tight mt-5 text-balance">
+          Ayurvedic Wholesale,<br class="hidden sm:block"> Reimagined for <span class="text-saffron-400">Rampur</span>.
+        </h1>
+        <p class="text-white/70 text-lg mt-5 max-w-xl">
+          Retailers apna order seedha app se karein — live PTR/MRP, running schemes aur digital ledger, no more calling for rates. Ek dukaan, poora wholesale market.
+        </p>
+
+        <form class="mt-8 flex flex-col sm:flex-row gap-2 max-w-lg" onsubmit="return false;">
+          <div class="relative flex-1">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-brand-700" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5" stroke-linecap="round"/></svg>
+            <input type="text" placeholder="Search Liv.52, Chyawanprash, Shankhpushpi…" class="w-full pl-11 pr-4 py-3.5 rounded-full text-sm bg-white/95 placeholder:text-ink-500 focus:outline-none focus:ring-2 focus:ring-saffron-500">
+          </div>
+          <button class="btn btn-saffron">Search Catalog</button>
+        </form>
+
+        <div class="flex flex-wrap gap-3 mt-6">
+          <a href="catalog.html" class="btn btn-primary">Browse Full Catalog
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="login.html" class="btn btn-outline-white">Become a Retailer Partner</a>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mt-10 max-w-md">
+          <div><p class="text-white font-display font-bold text-2xl">500+</p><p class="text-white/55 text-xs mt-0.5">Retailers Onboard</p></div>
+          <div><p class="text-white font-display font-bold text-2xl">1,200+</p><p class="text-white/55 text-xs mt-0.5">SKUs Live</p></div>
+          <div><p class="text-white font-display font-bold text-2xl">24 hr</p><p class="text-white/55 text-xs mt-0.5">Dispatch Window</p></div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="rx-card rounded-3xl shadow-lg p-5 sm:p-6 max-w-md ml-auto rotate-1">
+          <div class="flex items-center justify-between pb-4 border-b border-brand-100">
+            <p class="font-display font-semibold text-brand-900">Quick Order</p>
+            <span class="badge badge-green">Live Ledger Synced</span>
+          </div>
+          <div class="space-y-3 py-4">
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3">
+                <span class="w-11 h-11 rounded-xl bg-brand-50 flex items-center justify-center text-lg">🌿</span>
+                <div><p class="text-sm font-semibold">Liv.52 Syrup 200ml</p><p class="text-xs text-ink-500">Himalaya · PTR ₹120</p></div>
+              </div>
+              <span class="badge badge-scheme">10+1</span>
+            </div>
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3">
+                <span class="w-11 h-11 rounded-xl bg-brand-50 flex items-center justify-center text-lg">🍯</span>
+                <div><p class="text-sm font-semibold">Dabur Honey 500g</p><p class="text-xs text-ink-500">Dabur · PTR ₹180</p></div>
+              </div>
+              <span class="badge badge-outline">5% Off</span>
+            </div>
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3">
+                <span class="w-11 h-11 rounded-xl bg-brand-50 flex items-center justify-center text-lg">🧴</span>
+                <div><p class="text-sm font-semibold">Baidyanath Shankhpushpi</p><p class="text-xs text-ink-500">Baidyanath · PTR ₹95</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-brand-100 flex items-center justify-between">
+            <div><p class="text-xs text-ink-500">Grand Total</p><p class="font-display font-bold text-brand-900 text-lg">₹1,876.00</p></div>
+            <span class="btn btn-primary btn-sm">Checkout →</span>
+          </div>
+        </div>
+        <div class="absolute -bottom-4 left-3 sm:-bottom-6 sm:-left-8 card rounded-2xl p-3 sm:p-3.5 shadow-lg flex items-center gap-2.5 max-w-[190px] sm:max-w-[220px]">
+          <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-green-500/15 text-brand-700 flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </span>
+          <p class="text-[11px] sm:text-xs font-semibold text-ink-700 leading-snug">WhatsApp receipt sent — Order #FD-10292</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust strip -->
+<section class="border-b border-line bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-ink-500 text-sm">
+    <div class="flex items-center gap-2"><svg class="w-4 h-4 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3Z"/></svg>DL-Verified Retailer Access</div>
+    <div class="flex items-center gap-2"><svg class="w-4 h-4 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>SSL Secured Checkout</div>
+    <div class="flex items-center gap-2"><svg class="w-4 h-4 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-4 4"/></svg>GST-Ready Invoicing</div>
+    <div class="flex items-center gap-2"><svg class="w-4 h-4 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>Daily Backed-Up Records</div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+  <div class="reveal text-center max-w-2xl mx-auto mb-12">
+    <span class="kicker justify-center">Shop by Category</span>
+    <h2 class="font-display font-bold text-3xl mt-3">Everything a Medical Store Needs</h2>
+    <p class="text-ink-500 mt-3">Ayurvedic, Allopathic aur Generic — sab ek jagah, wholesale rates par.</p>
+  </div>
+  <div class="grid sm:grid-cols-3 gap-6">
+    <a href="catalog.html" class="reveal card card-hover p-8 text-center group">
+      <span class="w-16 h-16 rounded-2xl bg-brand-50 text-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition">🌿</span>
+      <h3 class="font-display font-semibold text-lg">Ayurvedic</h3>
+      <p class="text-ink-500 text-sm mt-1.5">Herbal syrups, churna &amp; classical formulations</p>
+      <span class="badge badge-green mt-4">420+ SKUs</span>
+    </a>
+    <a href="catalog.html" class="reveal card card-hover p-8 text-center group">
+      <span class="w-16 h-16 rounded-2xl bg-brand-50 text-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition">💊</span>
+      <h3 class="font-display font-semibold text-lg">Allopathic</h3>
+      <p class="text-ink-500 text-sm mt-1.5">Fast-moving branded pharma essentials</p>
+      <span class="badge badge-green mt-4">610+ SKUs</span>
+    </a>
+    <a href="catalog.html" class="reveal card card-hover p-8 text-center group">
+      <span class="w-16 h-16 rounded-2xl bg-brand-50 text-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition">🧴</span>
+      <h3 class="font-display font-semibold text-lg">Generic</h3>
+      <p class="text-ink-500 text-sm mt-1.5">Value-for-money generic alternatives</p>
+      <span class="badge badge-green mt-4">190+ SKUs</span>
+    </a>
+  </div>
+</section>
+
+<!-- Top sellers -->
+<section class="bg-white border-y border-line py-16 sm:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal flex items-end justify-between mb-10 gap-4">
+      <div>
+        <span class="kicker">Chalta Maal</span>
+        <h2 class="font-display font-bold text-3xl mt-3">Top Sellers This Week</h2>
+      </div>
+      <a href="catalog.html" class="btn btn-ghost btn-sm shrink-0">View All</a>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="reveal card card-hover p-5 flex flex-col">
+        <div class="flex items-center justify-between mb-4">
+          <span class="w-14 h-14 rounded-xl bg-brand-50 text-2xl flex items-center justify-center">🌿</span>
+          <span class="badge badge-scheme">10+1 Free</span>
+        </div>
+        <p class="font-semibold">Liv.52 Syrup 200ml</p>
+        <p class="text-xs text-ink-500 mb-3">Himalaya</p>
+        <div class="mt-auto flex items-end justify-between">
+          <div><p class="text-[11px] text-ink-500">PTR / MRP</p><p class="font-display font-bold text-brand-800">₹120 <span class="text-ink-300 font-normal line-through text-xs">₹150</span></p></div>
+          <button data-add-to-cart="liv52-syrup" class="btn btn-primary btn-sm !px-3.5">+ Add</button>
+        </div>
+      </div>
+
+      <div class="reveal card card-hover p-5 flex flex-col">
+        <div class="flex items-center justify-between mb-4">
+          <span class="w-14 h-14 rounded-xl bg-brand-50 text-2xl flex items-center justify-center">🍯</span>
+          <span class="badge badge-outline">5% Off</span>
+        </div>
+        <p class="font-semibold">Dabur Honey 500g</p>
+        <p class="text-xs text-ink-500 mb-3">Dabur</p>
+        <div class="mt-auto flex items-end justify-between">
+          <div><p class="text-[11px] text-ink-500">PTR / MRP</p><p class="font-display font-bold text-brand-800">₹180 <span class="text-ink-300 font-normal line-through text-xs">₹220</span></p></div>
+          <button data-add-to-cart="dabur-honey" class="btn btn-primary btn-sm !px-3.5">+ Add</button>
+        </div>
+      </div>
+
+      <div class="reveal card card-hover p-5 flex flex-col">
+        <div class="flex items-center justify-between mb-4">
+          <span class="w-14 h-14 rounded-xl bg-brand-50 text-2xl flex items-center justify-center">🧴</span>
+          <span class="badge badge-green">In Stock</span>
+        </div>
+        <p class="font-semibold">Baidyanath Shankhpushpi</p>
+        <p class="text-xs text-ink-500 mb-3">Baidyanath</p>
+        <div class="mt-auto flex items-end justify-between">
+          <div><p class="text-[11px] text-ink-500">PTR / MRP</p><p class="font-display font-bold text-brand-800">₹95 <span class="text-ink-300 font-normal line-through text-xs">₹115</span></p></div>
+          <button data-add-to-cart="shankhpushpi" class="btn btn-primary btn-sm !px-3.5">+ Add</button>
+        </div>
+      </div>
+
+      <div class="reveal card card-hover p-5 flex flex-col">
+        <div class="flex items-center justify-between mb-4">
+          <span class="w-14 h-14 rounded-xl bg-brand-50 text-2xl flex items-center justify-center">🌿</span>
+          <span class="badge badge-scheme">8% Bulk</span>
+        </div>
+        <p class="font-semibold">Himalaya Liv.52 DS</p>
+        <p class="text-xs text-ink-500 mb-3">Himalaya</p>
+        <div class="mt-auto flex items-end justify-between">
+          <div><p class="text-[11px] text-ink-500">PTR / MRP</p><p class="font-display font-bold text-brand-800">₹145 <span class="text-ink-300 font-normal line-through text-xs">₹175</span></p></div>
+          <button data-add-to-cart="liv52-ds" class="btn btn-primary btn-sm !px-3.5">+ Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why go online -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+  <div class="reveal text-center max-w-2xl mx-auto mb-12">
+    <span class="kicker justify-center">Kyun Online Banna Hai</span>
+    <h2 class="font-display font-bold text-3xl mt-3">Why Go Online?</h2>
+  </div>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="reveal card p-7 sm:p-8 border-red-100">
+      <p class="font-display font-semibold text-red-700 mb-5 flex items-center gap-2"><span class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center">📵</span> Old Way — Phone / WhatsApp Order</p>
+      <ul class="space-y-4 text-sm text-ink-700">
+        <li class="flex gap-3"><span class="text-red-500 mt-0.5">✕</span> Retailers call or message to ask rates repeatedly.</li>
+        <li class="flex gap-3"><span class="text-red-500 mt-0.5">✕</span> Owner handles 100+ manual calls daily.</li>
+        <li class="flex gap-3"><span class="text-red-500 mt-0.5">✕</span> Expiry claims written on scraps of paper.</li>
+        <li class="flex gap-3"><span class="text-red-500 mt-0.5">✕</span> Disputes over ledger outstanding balance.</li>
+        <li class="flex gap-3"><span class="text-red-500 mt-0.5">✕</span> Field sales reps send orders late.</li>
+      </ul>
+    </div>
+    <div class="reveal card p-7 sm:p-8 bg-brand-900 border-brand-900 text-white">
+      <p class="font-display font-semibold text-saffron-400 mb-5 flex items-center gap-2"><span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">🌐</span> New Way — Fairdeal Dukaan Website</p>
+      <ul class="space-y-4 text-sm text-white/85">
+        <li class="flex gap-3"><span class="text-saffron-400 mt-0.5">✔</span> Live PTR and MRP show instantly on screen.</li>
+        <li class="flex gap-3"><span class="text-saffron-400 mt-0.5">✔</span> Orders arrive directly inside the Admin Panel.</li>
+        <li class="flex gap-3"><span class="text-saffron-400 mt-0.5">✔</span> Retailers upload expiry claims with photos online.</li>
+        <li class="flex gap-3"><span class="text-saffron-400 mt-0.5">✔</span> Retailers view their ledger and due dates anytime.</li>
+        <li class="flex gap-3"><span class="text-saffron-400 mt-0.5">✔</span> Reps book orders from the retail shop instantly.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Feature grid: What you get -->
+<section class="bg-white border-y border-line py-16 sm:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal text-center max-w-2xl mx-auto mb-12">
+      <span class="kicker justify-center">Aapko Kya Milega</span>
+      <h2 class="font-display font-bold text-3xl mt-3">What You Get</h2>
+      <p class="text-ink-500 mt-3">Ek platform mein pura B2B workflow — order se lekar ledger tak.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="reveal card card-hover p-6"><span class="text-2xl">🛒</span><p class="font-semibold mt-3">Online Order</p><p class="text-sm text-ink-500 mt-1">Order direct, no calling required.</p></div>
+      <div class="reveal card card-hover p-6"><span class="text-2xl">📄</span><p class="font-semibold mt-3">Digital Ledger</p><p class="text-sm text-ink-500 mt-1">Live bills and balance, always visible.</p></div>
+      <div class="reveal card card-hover p-6"><span class="text-2xl">🚚</span><p class="font-semibold mt-3">Order Tracking</p><p class="text-sm text-ink-500 mt-1">Live dispatch alerts to your phone.</p></div>
+      <div class="reveal card card-hover p-6"><span class="text-2xl">🎁</span><p class="font-semibold mt-3">Live Schemes</p><p class="text-sm text-ink-500 mt-1">10+1 schemes shown automatically.</p></div>
+      <div class="reveal card card-hover p-6"><span class="text-2xl">📊</span><p class="font-semibold mt-3">Owner Dashboard</p><p class="text-sm text-ink-500 mt-1">See sales &amp; collections at a glance.</p></div>
+      <div class="reveal card card-hover p-6"><span class="text-2xl">⚡</span><p class="font-semibold mt-3">Quick Order</p><p class="text-sm text-ink-500 mt-1">Search and add items fast.</p></div>
+      <div class="reveal card card-hover p-6"><span class="text-2xl">🤝</span><p class="font-semibold mt-3">Salesman CRM</p><p class="text-sm text-ink-500 mt-1">Field staff visits &amp; targets tracked.</p></div>
+      <div class="reveal card card-hover p-6"><span class="text-2xl">📱</span><p class="font-semibold mt-3">WhatsApp Alerts</p><p class="text-sm text-ink-500 mt-1">Invoice details sent instantly.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+  <div class="reveal mesh-hero leaf-pattern rounded-3xl px-6 sm:px-14 py-14 text-center relative overflow-hidden">
+    <div class="blob w-72 h-72 bg-saffron-500 -top-10 -right-10"></div>
+    <h2 class="font-display font-bold text-white text-3xl sm:text-4xl max-w-2xl mx-auto text-balance relative">Ready to take your dukaan online?</h2>
+    <p class="text-white/70 mt-4 max-w-lg mx-auto relative">Register your shop in 2 minutes. Verification within 2 hours — start ordering the same day.</p>
+    <div class="flex flex-wrap justify-center gap-3 mt-8 relative">
+      <a href="login.html" class="btn btn-saffron">Register Your Shop</a>
+      <a href="https://wa.me/918603227530" target="_blank" rel="noopener" class="btn btn-outline-white">Talk to Us on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="siteFooter"></footer>
+
+<div id="toast"><svg viewBox="0 0 24 24" class="w-4 h-4 text-saffron-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Added to cart</span></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/footer.js"></script>
+</body>
+</html>
