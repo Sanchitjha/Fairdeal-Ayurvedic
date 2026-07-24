@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Detail | Fairdeal Trading Agency</title>
+<meta name="description" content="Wholesale product detail — PTR, PTS, MRP, batch and scheme details for ordering.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><text y=%2220%22 font-size=%2220%22>🌿</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {50:'#f2f9f4',100:'#dcf1e3',500:'#249157',600:'#1c7a44',700:'#166139',800:'#0f3d2c',900:'#0c2f22'},
+          saffron: {400:'#f7b73a',500:'#ee9d0e',600:'#c97a00'},
+          cream: '#fbf7ee'
+        },
+        fontFamily: { display: ['Poppins','sans-serif'], sans: ['Inter','sans-serif'] }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-cream text-ink-900 antialiased">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 mesh-hero leaf-pattern">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 shrink-0">
+        <span class="w-11 h-11 rounded-2xl bg-saffron-500 text-brand-900 flex items-center justify-center shadow-md">
+          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 21C7 20 4 16 4 11c0-5 3-8 8-8s8 3 8 8c0 5-3 9-8 10Z"/><path d="M8.5 13c1.5-3 3.5-5 7-6.5"/></svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-display font-bold text-white text-lg">Fairdeal Trading</span>
+          <span class="block text-[11px] text-white/60 tracking-wide">AYURVEDIC WHOLESALE · RAMPUR</span>
+        </span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link text-sm">Home</a>
+        <a href="catalog.html" class="nav-link text-sm">Catalog</a>
+        <a href="dashboard.html" class="nav-link text-sm">Ledger &amp; Orders</a>
+        <a href="cart.html" class="nav-link text-sm">Cart</a>
+        <a href="contact.html" class="nav-link text-sm">Contact</a>
+      </nav>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="cart.html" class="relative w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition flex items-center justify-center text-white" aria-label="Cart">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 7H6"/></svg>
+          <span data-cart-badge class="absolute -top-1.5 -right-1.5 bg-saffron-500 text-[#3a2400] text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+        </a>
+        <a href="login.html" class="btn btn-saffron btn-sm">Retailer Login</a>
+      </div>
+      <button id="navToggle" class="md:hidden text-white p-2" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileNav" class="hidden md:hidden border-t border-white/10 bg-brand-900/98 px-4 pb-5 pt-2 space-y-1">
+    <a href="index.html" class="block nav-link py-2">Home</a>
+    <a href="catalog.html" class="block nav-link py-2">Catalog</a>
+    <a href="dashboard.html" class="block nav-link py-2">Ledger &amp; Orders</a>
+    <a href="cart.html" class="block nav-link py-2">Cart (<span data-cart-badge>0</span>)</a>
+    <a href="contact.html" class="block nav-link py-2">Contact</a>
+    <a href="login.html" class="btn btn-saffron btn-block mt-3">Retailer Login</a>
+  </div>
+</header>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+  <p class="text-ink-500 text-xs"><a href="index.html" class="hover:text-brand-700">Home</a> / <a href="catalog.html" class="hover:text-brand-700">Catalog</a> / <span id="pdBreadcrumb" class="text-ink-900">Product</span></p>
+</div>
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
+  <div class="grid lg:grid-cols-2 gap-10 lg:gap-14">
+
+    <!-- Product visual -->
+    <div>
+      <div class="rx-card rounded-3xl p-10 sm:p-16 flex items-center justify-center relative overflow-hidden">
+        <div class="blob w-56 h-56 bg-brand-500 -top-10 -left-10"></div>
+        <span id="pdIconBig" class="text-[7rem] sm:text-[9rem] relative">🌿</span>
+        <span id="pdSchemeCorner" class="absolute top-5 left-5 badge badge-scheme hidden"></span>
+      </div>
+      <div class="grid grid-cols-4 gap-3 mt-4">
+        <div class="rx-card rounded-xl aspect-square flex items-center justify-center text-2xl border-2 border-brand-600"><span id="pdIconThumb">🌿</span></div>
+        <div class="rx-card rounded-xl aspect-square flex items-center justify-center text-2xl opacity-60">📦</div>
+        <div class="rx-card rounded-xl aspect-square flex items-center justify-center text-2xl opacity-60">🏷️</div>
+        <div class="rx-card rounded-xl aspect-square flex items-center justify-center text-2xl opacity-60">📄</div>
+      </div>
+    </div>
+
+    <!-- Product info -->
+    <div>
+      <span class="badge badge-green">Ayurvedic · Wholesale</span>
+      <h1 id="pdName" class="font-display font-bold text-3xl sm:text-4xl mt-4">Loading…</h1>
+      <p class="text-ink-500 mt-2">Brand: <span id="pdBrand" class="text-ink-900 font-medium"></span></p>
+
+      <div class="flex items-center gap-1 mt-3 text-saffron-500">
+        ★★★★★ <span class="text-ink-500 text-sm ml-1.5">4.8 (312 retailer orders)</span>
+      </div>
+
+      <div class="grid grid-cols-3 gap-3 mt-7">
+        <div class="card p-4 text-center">
+          <p class="text-[11px] text-ink-500 uppercase tracking-wide">MRP</p>
+          <p id="pdMRP" class="font-display font-bold text-lg mt-1">₹0.00</p>
+        </div>
+        <div class="card p-4 text-center border-2 border-brand-600">
+          <p class="text-[11px] text-brand-700 uppercase tracking-wide font-semibold">PTR (Retailer)</p>
+          <p id="pdPTR" class="font-display font-bold text-lg mt-1 text-brand-800">₹0.00</p>
+        </div>
+        <div class="card p-4 text-center">
+          <p class="text-[11px] text-ink-500 uppercase tracking-wide">PTS (Distributor)</p>
+          <p id="pdPTS" class="font-display font-bold text-lg mt-1">₹0.00</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3 mt-6 text-sm">
+        <span class="badge badge-outline">📦 Pack: <span id="pdPack">Standard Pack</span></span>
+        <span class="badge badge-outline">🧪 Batch: <span id="pdBatch"></span></span>
+        <span class="badge badge-outline">📅 Expiry: <span id="pdExpiry"></span></span>
+      </div>
+
+      <div id="pdSchemeBox" class="card p-5 mt-6 bg-saffron-500/10 border-saffron-500/30 flex items-center gap-3 hidden">
+        <span class="text-2xl">🎁</span>
+        <div><p id="pdSchemeTitle" class="font-semibold text-sm"></p><p id="pdSchemeDesc" class="text-xs text-ink-500"></p></div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-4 mt-8">
+        <div class="stepper" data-stepper>
+          <button data-action="dec" type="button">−</button>
+          <input id="pdQtyInput" type="number" value="1" min="1">
+          <button data-action="inc" type="button">+</button>
+        </div>
+        <button id="pdAddBtn" data-add-to-cart="liv52-syrup" data-qty-input="pdQtyInput" class="btn btn-primary flex-1 min-w-[200px]">Add to Order (Cart Mein Dalein)</button>
+      </div>
+      <p class="text-xs text-ink-500 mt-2">GST 12% applied automatically at checkout.</p>
+
+      <div class="grid sm:grid-cols-3 gap-4 mt-8 pt-8 border-t border-line text-sm">
+        <div class="flex items-start gap-2.5"><svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3Z"/></svg><span>DL-verified pricing, hidden from public.</span></div>
+        <div class="flex items-start gap-2.5"><svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span>Same-day dispatch before 2 PM cutoff.</span></div>
+        <div class="flex items-start gap-2.5"><svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-4 4"/></svg><span>GST invoice generated automatically.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Description tabs -->
+  <div class="mt-14 grid lg:grid-cols-3 gap-6">
+    <div class="lg:col-span-2 card p-7 sm:p-8">
+      <h2 class="font-display font-semibold text-xl mb-4">Product Description</h2>
+      <p id="pdDescription" class="text-sm text-ink-700 leading-relaxed"></p>
+      <div class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mt-6 text-sm">
+        <div class="flex justify-between border-b border-line pb-2"><span class="text-ink-500">GST Slab</span><span class="font-medium">12%</span></div>
+        <div class="flex justify-between border-b border-line pb-2"><span class="text-ink-500">Min. Order Qty</span><span class="font-medium">5 Units</span></div>
+        <div class="flex justify-between border-b border-line pb-2"><span class="text-ink-500">Storage</span><span class="font-medium">Cool &amp; Dry Place</span></div>
+        <div class="flex justify-between border-b border-line pb-2"><span class="text-ink-500">Dispatch</span><span class="font-medium">Same-day before 2 PM</span></div>
+      </div>
+    </div>
+    <div class="card p-7 sm:p-8">
+      <h2 class="font-display font-semibold text-xl mb-4">Batch &amp; Expiry</h2>
+      <div class="space-y-4 text-sm">
+        <div class="flex items-center justify-between"><span class="text-ink-500">Current Batch</span><span id="pdBatchBatch" class="font-semibold"></span></div>
+        <div class="flex items-center justify-between"><span class="text-ink-500">Expiry</span><span id="pdBatchExpiry" class="font-semibold"></span></div>
+        <div class="flex items-center justify-between"><span class="text-ink-500">Stock Status</span><span class="badge badge-green">In Stock</span></div>
+      </div>
+      <a href="dashboard.html" class="btn btn-ghost btn-block btn-sm mt-6">Raise Expiry Claim</a>
+    </div>
+  </div>
+
+  <!-- Related products -->
+  <div class="mt-16">
+    <h2 class="font-display font-semibold text-xl mb-6">You Might Also Order</h2>
+    <div id="relatedGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+  </div>
+</section>
+
+<footer id="siteFooter"></footer>
+
+<div id="toast"><svg viewBox="0 0 24 24" class="w-4 h-4 text-saffron-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Added to cart</span></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/product-detail.js"></script>
+<script src="assets/js/footer.js"></script>
+</body>
+</html>
