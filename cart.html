@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart &amp; Checkout | Fairdeal Trading Agency</title>
+<meta name="description" content="Review your order, applied schemes and GST, then choose UPI, Cash on Delivery or 7-Day Trade Credit.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><text y=%2220%22 font-size=%2220%22>🌿</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {50:'#f2f9f4',100:'#dcf1e3',500:'#249157',600:'#1c7a44',700:'#166139',800:'#0f3d2c',900:'#0c2f22'},
+          saffron: {400:'#f7b73a',500:'#ee9d0e',600:'#c97a00'},
+          cream: '#fbf7ee'
+        },
+        fontFamily: { display: ['Poppins','sans-serif'], sans: ['Inter','sans-serif'] }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-cream text-ink-900 antialiased">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 mesh-hero leaf-pattern">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 shrink-0">
+        <span class="w-11 h-11 rounded-2xl bg-saffron-500 text-brand-900 flex items-center justify-center shadow-md">
+          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 21C7 20 4 16 4 11c0-5 3-8 8-8s8 3 8 8c0 5-3 9-8 10Z"/><path d="M8.5 13c1.5-3 3.5-5 7-6.5"/></svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-display font-bold text-white text-lg">Fairdeal Trading</span>
+          <span class="block text-[11px] text-white/60 tracking-wide">AYURVEDIC WHOLESALE · RAMPUR</span>
+        </span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link text-sm">Home</a>
+        <a href="catalog.html" class="nav-link text-sm">Catalog</a>
+        <a href="dashboard.html" class="nav-link text-sm">Ledger &amp; Orders</a>
+        <a href="cart.html" class="nav-link text-sm">Cart</a>
+        <a href="contact.html" class="nav-link text-sm">Contact</a>
+      </nav>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="cart.html" class="relative w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition flex items-center justify-center text-white" aria-label="Cart">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 7H6"/></svg>
+          <span data-cart-badge class="absolute -top-1.5 -right-1.5 bg-saffron-500 text-[#3a2400] text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+        </a>
+        <a href="login.html" class="btn btn-saffron btn-sm">Retailer Login</a>
+      </div>
+      <button id="navToggle" class="md:hidden text-white p-2" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileNav" class="hidden md:hidden border-t border-white/10 bg-brand-900/98 px-4 pb-5 pt-2 space-y-1">
+    <a href="index.html" class="block nav-link py-2">Home</a>
+    <a href="catalog.html" class="block nav-link py-2">Catalog</a>
+    <a href="dashboard.html" class="block nav-link py-2">Ledger &amp; Orders</a>
+    <a href="cart.html" class="block nav-link py-2">Cart (<span data-cart-badge>0</span>)</a>
+    <a href="contact.html" class="block nav-link py-2">Contact</a>
+    <a href="login.html" class="btn btn-saffron btn-block mt-3">Retailer Login</a>
+  </div>
+</header>
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+  <p class="text-ink-500 text-xs mb-2"><a href="index.html" class="hover:text-brand-700">Home</a> / <span class="text-ink-900">Cart &amp; Checkout</span></p>
+  <h1 class="font-display font-bold text-3xl sm:text-4xl mb-1">My Cart</h1>
+  <p class="text-ink-500 mb-8">Meri Tokri — review items, applied schemes and complete your order.</p>
+
+  <div class="grid lg:grid-cols-[1fr_380px] gap-8 items-start">
+    <div class="space-y-6">
+
+      <!-- Empty state -->
+      <div id="cartEmpty" class="card p-10 sm:p-14 text-center hidden">
+        <span class="text-4xl">🛒</span>
+        <p class="font-display font-semibold text-lg mt-4">Your cart is empty</p>
+        <p class="text-ink-500 text-sm mt-1.5 max-w-sm mx-auto">Browse the catalog and add a few products — your order will show up here.</p>
+        <a href="catalog.html" class="btn btn-primary mt-6">Browse Catalog</a>
+      </div>
+
+      <!-- Cart table -->
+      <div id="cartTableWrap" class="card overflow-hidden">
+        <div class="overflow-x-auto scroll-thin">
+          <table class="w-full table-clean">
+            <thead class="bg-brand-50/60">
+              <tr><th>Item</th><th>Qty</th><th>Price (PTR)</th><th>Scheme</th><th>GST</th><th class="text-right">Total</th><th></th></tr>
+            </thead>
+            <tbody id="cartRows"></tbody>
+          </table>
+        </div>
+        <div class="p-5 border-t border-line flex flex-wrap gap-3 justify-between items-center bg-white">
+          <a href="catalog.html" class="btn btn-ghost btn-sm">+ Add More Items</a>
+          <p class="text-xs text-ink-500">Prices shown are per-unit PTR, exclusive of GST.</p>
+        </div>
+      </div>
+
+      <!-- Delivery address -->
+      <div class="card p-6">
+        <div class="flex items-center justify-between mb-3">
+          <p class="font-display font-semibold">Delivery Address</p>
+          <button class="text-brand-700 text-sm font-semibold hover:underline" data-demo-toast="Address book — connect this to your retailer profile">Change Address</button>
+        </div>
+        <div class="flex items-start gap-3 text-sm text-ink-700">
+          <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11a7 7 0 1 1 14 0c0 4.9-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          <p><span class="font-semibold">Gupta Medical Store</span><br>Near Railway Crossing, Civil Lines, Rampur (U.P.) – 244901</p>
+        </div>
+      </div>
+
+      <!-- Payment mode -->
+      <div class="card p-6">
+        <p class="font-display font-semibold mb-4">Payment Mode (Payment Kaise Karenge)</p>
+        <div class="space-y-3">
+          <label class="flex items-center gap-3 border border-line rounded-xl p-4 cursor-pointer hover:border-brand-500 transition has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50">
+            <input type="radio" name="pay" value="upi" class="accent-brand-600 w-4 h-4">
+            <span class="text-xl">📲</span>
+            <span class="flex-1"><span class="block font-medium text-sm">UPI (PhonePe / GPay)</span><span class="block text-xs text-ink-500">Instant confirmation</span></span>
+          </label>
+          <label class="flex items-center gap-3 border border-line rounded-xl p-4 cursor-pointer hover:border-brand-500 transition has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50">
+            <input type="radio" name="pay" value="cod" class="accent-brand-600 w-4 h-4">
+            <span class="text-xl">💵</span>
+            <span class="flex-1"><span class="block font-medium text-sm">Cash on Delivery (COD)</span><span class="block text-xs text-ink-500">Pay when order arrives</span></span>
+          </label>
+          <label class="flex items-center gap-3 border-2 border-brand-600 bg-brand-50 rounded-xl p-4 cursor-pointer">
+            <input type="radio" name="pay" value="credit" checked class="accent-brand-600 w-4 h-4">
+            <span class="text-xl">🧾</span>
+            <span class="flex-1"><span class="block font-medium text-sm">7 Days Trade Credit (Udhaar)</span><span class="block text-xs text-ink-500">Credit Limit Available: ₹50,000.00</span></span>
+            <span class="badge badge-green">Recommended</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order summary -->
+    <div class="card p-6 lg:sticky lg:top-28">
+      <p class="font-display font-semibold text-lg mb-5">Order Summary</p>
+      <div class="space-y-3 text-sm">
+        <div class="flex justify-between"><span class="text-ink-500">Subtotal</span><span id="sumSubtotal" class="font-medium">₹0.00</span></div>
+        <div id="sumSavingsRow" class="flex justify-between hidden"><span class="text-ink-500">Scheme Savings</span><span id="sumSavings" class="font-medium text-brand-700">− ₹0.00</span></div>
+        <div class="flex justify-between"><span class="text-ink-500">GST Tax (12%)</span><span id="sumGST" class="font-medium">₹0.00</span></div>
+        <div class="flex justify-between"><span class="text-ink-500">Delivery</span><span class="font-medium text-brand-700">Free</span></div>
+        <div id="sumBonusRow" class="flex justify-between hidden"><span class="text-ink-500">Bonus Free Units</span><span class="font-medium text-brand-700">+<span id="sumBonusUnits">0</span> unit(s)</span></div>
+      </div>
+      <div class="border-t border-line mt-4 pt-4 flex justify-between items-center">
+        <span class="font-display font-semibold">Grand Total</span>
+        <span id="sumGrandTotal" class="font-display font-bold text-2xl text-brand-800">₹0.00</span>
+      </div>
+      <button id="placeOrderBtn" class="btn btn-primary btn-block mt-6 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Place Order Now (Order Confirm Karein)</button>
+      <p class="text-xs text-ink-500 text-center mt-3">By placing this order you agree to Fairdeal's standard trade terms.</p>
+    </div>
+  </div>
+
+  <!-- Order confirmation preview -->
+  <div id="confirm" class="mt-16 reveal hidden">
+    <div class="card p-8 sm:p-10 text-center max-w-xl mx-auto">
+      <span class="w-16 h-16 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center text-3xl mx-auto mb-5">✔</span>
+      <h2 class="font-display font-bold text-2xl">Order Placed Successfully!</h2>
+      <p class="text-ink-500 mt-2">Order ID: <strong id="confirmOrderId" class="text-ink-900">#FD-00000</strong> · Value: <strong id="confirmOrderTotal" class="text-ink-900">₹0.00</strong></p>
+      <div class="card bg-brand-50 border-brand-100 p-4 mt-6 text-left flex items-start gap-3">
+        <span class="text-xl">📲</span>
+        <p id="confirmWhatsAppMsg" class="text-sm text-ink-700"></p>
+      </div>
+      <a href="dashboard.html" class="btn btn-primary mt-7">Go to Dashboard</a>
+    </div>
+  </div>
+</section>
+
+<footer id="siteFooter"></footer>
+
+<div id="toast"><svg viewBox="0 0 24 24" class="w-4 h-4 text-saffron-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Added to cart</span></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/cart-page.js"></script>
+<script src="assets/js/footer.js"></script>
+</body>
+</html>
